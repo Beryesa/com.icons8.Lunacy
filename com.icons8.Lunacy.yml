@@ -41,15 +41,15 @@ modules:
     sources:
       - type: extra-data
         filename: Lunacy.deb
-        url: https://lcdn.icons8.com/setup/Lunacy_9.6.1.deb
-        sha256: c3bab0e47c897048deba3cf9e1b4e49287e6cda70804b62a26f56e95dbdbcad1
-        size: 84114004
+        url: https://lcdn.icons8.com/setup/beta/Lunacy.deb
+        sha256: bb5119faa92da426f61f291fa33652173416ee19eb36e7b7a47bb773137e7406
+        size: 63569076
         only-arches:
           - x86_64
         x-checker-data:
-          type: html
-          url: https://docs.icons8.com/release-notes
-          pattern: (https://\S+/setup/Lunacy_([0-9.]+).deb)
+          type: rotating-url
+          url: https://lcdn.icons8.com/setup/beta/Lunacy.deb
+          pattern: https://\S+/setup/beta/Lunacy(.+)\.deb
           is-main-source: true
 
       - type: script
